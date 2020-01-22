@@ -1,0 +1,13 @@
+@font-face{
+    font-family: "TTTravels-Light";
+    src: url("TTTravels-Light/TTTravels-Light.woff");
+    src: url("TTTravels-Light/TTTravels-Light.ttf.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: "Schnyder_X_Cond_XL_Demi";
+    src: url("Schnyder_X_Cond_XL_Demi/Schnyder_X_Cond_XL_Demi.otf.otf");
+    font-style: normal;
+    font-weight: normal;
+}

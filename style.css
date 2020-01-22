@@ -1,0 +1,432 @@
+/*preloader*/
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #fff;
+    background-size: cover;
+    transition: 3s all;
+    opacity: 1;
+    visibility: visible;
+}
+.loader{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #a2a0a0;
+    border-radius: 50%;
+    border-top-color: #580300;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: 2s spin infinite linear;
+}
+.done{
+    opacity: 0;
+    visibility: hidden;
+}
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    cursor: none;
+}
+.container{
+    padding: 0 32px 0 32px;
+    width: 100%;
+    max-width: 1440px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    padding-top: 27px;
+}
+.logo_text{
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -1px;
+    color: #000;
+
+}
+.menu{
+    padding-top: 32px;
+}
+.menu_item{
+    padding-bottom: 10px;
+    font-family: "TTTravels-Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    transition: transform .2s linear;
+}
+.menu_item a{
+    color: #000;
+    text-decoration: none;
+    cursor: none;
+}
+.menu_item:hover{
+    transform: scale(1.3);
+}
+.scene{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.bg{
+    position: relative;
+    bottom: 120px;
+    width: 609px;
+    height: 727px;
+    left: 55px;
+    z-index: 3;
+}
+.photo_center{
+    width: 476px;
+    height: 650px;
+    z-index: 5;
+    position: absolute;
+    top: -60px;
+    left: 475px;
+}
+.photo_right{
+    width: 345px;
+    height: 238px;
+    z-index: 10;
+    position: absolute;
+    top: 310px;
+    left: 860px;
+}
+.photo_left {
+    width: 238px;
+    height: 331px;
+    z-index: 20;
+    position: absolute;
+    left: 225px;
+    top: 65px;
+}
+#cursor {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 20;
+    opacity: 40;
+}
+.drag_me {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    text-transform: uppercase;
+    font-size: 8px;
+}
+.swiper-container {
+    width: 609px;
+    height: 300px;
+    position: absolute;
+    bottom: 610px;
+    left: 10px;
+    z-index: 1000;
+}
+.swiper-slide{
+    color: #580300;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 86%;
+    font-size: 126px;
+    font-family: "Schnyder_X_Cond_XL_Demi";
+    letter-spacing: 10px;
+}
+.text_left{
+    text-transform: uppercase;
+    line-height: 86%;
+    font-size: 126px;
+    font-family: "Schnyder_X_Cond_XL_Demi";
+    letter-spacing: 10px;
+    color: #fff;
+    text-shadow: #580300 1px 1px 0, #580300 -1px -1px 0, 
+                 #580300 -1px 1px 0, #580300 1px -1px 0;
+    transform: skew(0, -1.5deg);
+    position: relative;
+    left: -490px;
+    top: -800px;
+}
+.text_right{
+    text-transform: uppercase;
+    line-height: 86%;
+    font-size: 126px;
+    font-family: "Schnyder_X_Cond_XL_Demi";
+    letter-spacing: 10px;
+    color: #fff;
+    text-shadow: #580300 1px 1px 0, #580300 -1px -1px 0, 
+                 #580300 -1px 1px 0, #580300 1px -1px 0;
+    transform: skew(0, 1.5deg);
+    position: relative;
+    left: 1490px;
+    top: -880px;
+}
+.link--container{
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 730px;
+}
+.line{
+    width: 80px;
+    height: 1px;
+    background: #393939;
+    opacity: 0.24;
+    position: relative;
+    top: 5px;
+}
+.social_link{
+    text-decoration: none;
+    font-family: "TTTravels-Light";
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0 5px; 0 5px;
+    color: #000;
+    opacity: 0.6;
+    transition: transform .2s linear;
+    cursor: none;
+}
+.social_link:hover{
+    transform: scale(1.4);
+}
+
+    
+@media (max-width: 1024px) {
+    .bg{
+        width: 506px;
+        height: 605px;
+    }
+    .photo_center{
+        width: 359px;
+        height: 530px;
+        left: 339px;
+    }
+    .photo_right{
+        width: 234px;
+        height: 162px;
+        left: 644.37px;
+        top: 270px;
+    }
+    .photo_left{
+        width: 163px;
+        height: 226px;
+        left: 178px;
+        top: 5px;
+    }
+    .swiper-slide{
+        font-size: 96px;
+        left: 80px;
+        top: 50px;
+    }
+    .link--container{
+        top: 625px;
+    }
+    .text_left{
+        font-size: 96px;
+        left: -375px;
+        top: -785px;
+    }
+    .text_right{
+        font-size: 96px;
+        left: 1002px;
+        top: -845px;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        height: 100%;
+    }
+    .bg{
+        width: 628px;
+        height: 789px;
+    }
+    .photo_center{
+        left: 245px;
+        top: 13px;
+    }
+    .photo_right{
+        left: 533px;
+        top: 342px;
+    }
+    .photo_left{
+        left: 84px;
+        top: 135px;
+    }
+    .swiper-slide{
+        left: 120px;
+        top: -60px;
+        letter-spacing: 8px;
+    }
+    .link--container{
+        top: 850px;
+    }
+    .text_left{
+        left: -415px;
+        top: -865px;
+    }
+    .text_right{
+        left: 792px;
+        top: -935px;
+    }
+}
+
+
+@media (max-width: 414px) {
+    body{
+        height: 100%;
+    }
+    .menu{
+       display: none;
+    }
+    .bg{
+        width: 392px;
+        height: 493px;
+        top: -3px;
+        left: 15px;
+    }
+    .photo_center{
+        width: 273px;
+        height: 403px;
+        left: 70px;
+        top: 50px;
+    }
+    .photo_right{
+       display: none;
+    }
+    .photo_left{
+        display: none;
+    }
+    .swiper-container{
+        position: relative;
+        bottom: 340px;
+    }
+    .swiper-slide{
+        left: 80px;
+        z-index: 1000;
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+    .link--container{
+        top: 595px;
+    }
+    .text_left{
+        left: -257px;
+        top: -565px;
+        font-size: 48px;
+    }
+    .text_right{
+        left: 450px;
+        top: -603px;
+        font-size: 48px;
+    }
+    .logo_text{
+        letter-spacing: 3px;
+        margin-left: 40px;
+    }
+    .burger_click{
+        width: 20px;
+        height: 1px;
+        background: rgba(40, 40, 40, 0.57);
+        float: right;
+        margin-top: 30px;
+        display: inline;
+    }
+    .burger_click::after{
+        content: "";
+        display: block;
+        margin-top: 7px;
+        width: 20px;
+        height: 1px;
+        background: rgba(40, 40, 40, 0.57);
+    }
+    .responsive{
+        display: block;
+        position: relative;
+    }
+    
+}
+
+@media (max-width: 375px) {
+    body{
+        height: 100%;
+    }
+    .menu{
+       display: none;
+    }
+    .bg{
+        width: 339px;
+        height: 429px;
+        top: 30px;
+        left: 15px;
+    }
+    .photo_center{
+        width: 249.67px;
+        height: 368.56px;
+        left: 70px;
+        top: 55px;
+    }
+    .photo_right{
+       display: none;
+    }
+    .photo_left{
+        display: none;
+    }
+    .swiper-container{
+        position: relative;
+        bottom: 290px;
+    }
+    .swiper-slide{
+        left: 80px;
+        z-index: 1000;
+        font-size: 44px;
+        letter-spacing: 5px;
+    }
+    .link--container{
+        top: 510px;
+    }
+    .text_left{
+        left: -250px;
+        top: -513px;
+        font-size: 44px;
+    }
+    .text_right{
+        left: 410px;
+        top: -547px;
+        font-size: 44px;
+    }
+    
+}
